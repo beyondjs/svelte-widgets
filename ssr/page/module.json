@@ -1,0 +1,11 @@
+{
+  "name": "page",
+  "platforms": "ssr",
+  "bundle": "code",
+  "svelte": {
+    "files": "*"
+  },
+  "ts": {
+    "files": "*"
+  }
+}

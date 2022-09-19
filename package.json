@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@beyond-js/widgets": "0.0.10",
+    "svelte": "^3.48.0"
+  }
+}
