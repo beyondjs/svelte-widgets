@@ -10,6 +10,10 @@
     "distributions": [
       {
         "name": "npm",
+        "maps": "external",
+        "ports": {
+          "bundles": 9115
+        },
         "npm": {
           "platforms": {
             "web": "web",
@@ -20,7 +24,9 @@
       {
         "name": "web-tsc",
         "platform": "web",
-        "port": 9997,
+        "ports": {
+          "bundles": 9116
+        },
         "ts": {
           "compiler": "tsc"
         }
@@ -28,7 +34,9 @@
       {
         "name": "ssr-tsc",
         "platform": "ssr",
-        "port": 9998,
+        "ports": {
+          "bundles": 9117
+        },
         "ts": {
           "compiler": "tsc"
         }
