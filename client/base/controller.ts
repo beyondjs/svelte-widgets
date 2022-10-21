@@ -1,6 +1,8 @@
 import {WidgetClientController} from '@beyond-js/widgets/controller';
 import {Wrapper} from "./wrapper";
 
+declare const require: (module: string) => any;
+
 export /*bundle*/
 abstract class SvelteWidgetController extends WidgetClientController {
     #wrapper: Wrapper;

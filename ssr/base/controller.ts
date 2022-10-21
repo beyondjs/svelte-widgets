@@ -1,5 +1,7 @@
 import {WidgetServerController, IWidgetRendered} from "@beyond-js/widgets/controller";
 
+declare const require: (module: string) => any;
+
 export /*bundle*/
 abstract class SvelteWidgetController extends WidgetServerController {
     render(props: Record<string, any>): IWidgetRendered {
