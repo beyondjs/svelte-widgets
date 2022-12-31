@@ -6,11 +6,10 @@
   "modules": {
     "path": "./"
   },
-  "libraries": {
-    "imports": [
-      "@beyond-js/kernel",
-      "@beyond-js/widgets"
-    ]
+  "dependencies": {
+    "svelte": "^3.55.0",
+    "@beyond-js/kernel": "^0.1.5",
+    "@beyond-js/widgets": "^0.1.1"
   },
   "deployment": {
     "distributions": [
