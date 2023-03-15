@@ -1,7 +1,7 @@
 {
-  "scope": "beyond-js",
-  "name": "svelte-widgets",
-  "version": "0.1.1",
+  "name": "@beyond-js/svelte-widgets",
+  "version": "0.1.2",
+  "description": "Create web projects as standalone microfrontends with Svelte.",
   "license": "MIT",
   "modules": {
     "path": "./"
