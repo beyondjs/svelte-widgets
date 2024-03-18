@@ -1,19 +1,23 @@
-import {SvelteWidgetController} from '@beyond-js/svelte-widgets/base';
-import {PageURI} from '@beyond-js/widgets/routing';
+import type { PageURI } from '@beyond-js/widgets/routing';
+import { SvelteWidgetController } from '@beyond-js/svelte-widgets/base';
+import { manager } from '@beyond-js/widgets/routing';
 
 export /*bundle*/
 abstract class PageSvelteWidgetController extends SvelteWidgetController {
-    #uri: PageURI;
-    get uri() {
-        return this.#uri;
-    }
+	#uri: PageURI;
+	get uri() {
+		return this.#uri;
+	}
 
-    mount() {
-        return super.mount({uri: this.#uri});
-    }
+	mount() {
+		return super.mount({ uri: this.#uri });
+	}
 
-    async initialise() {
-        this.#uri = new PageURI({widget: <any>this.widget});
-        await super.initialise();
-    }
+	async initialise() {
+		const { widget } = this;
+		const uri = manager.pages.obtain({ widget });
+		this.#uri = uri;
+
+		await super.initialise();
+	}
 }
