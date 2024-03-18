@@ -1,7 +1,7 @@
 FROM node:18
 
 # Set the working directory in the container
-WORKDIR /workspaces/widgets
+WORKDIR /workspaces/svelte-widgets
 
 # Make the script executable
 # RUN chmod +x .devcontainer/install_dependencies.sh
