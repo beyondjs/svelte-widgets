@@ -1,41 +1,7 @@
-# Welcome to `@beyond-js/svelte-widgets`
+# @beyond-js/svelte-widgets
 
-`@beyond-js/svelte-widgets` is a package for [BeyondJS](https://beyondjs.com), a platform for creating web projects as independent microfrontends. This package, built on `@beyond-js/widgets`, allows developers to use the Svelte framework in BeyondJS projects with ease.
+Svelte 3 rendering controllers for Beyond Widgets. Read [architecture, public APIs and lifecycle](docs/architecture.md) for setup, mounting, styles/HMR, routing, server rendering and known gaps.
 
-## Features
+Public imports are `@beyond-js/svelte-widgets/base` and `/page`; client/server platform selection chooses their implementation. Source files are authored as Beyond modules and require TypeScript plus the svelte processor. The [manifest](package.json) declares framework/core dependencies and distributions; installing dependencies alone does not create a runnable application or server.
 
--   Simple integration of Svelte in BeyondJS projects
--   Built on the flexible `@beyond-js/widgets` package
-
-## Getting Started
-
-1. Install the `@beyond-js/svelte-widgets` package in your BeyondJS project:
-
-```
-npm install @beyond-js/svelte-widgets
-```
-
-2. Add the `svelte` processor to the `bundle` configuration in the `module.json` file:
-
-```json
-{
-    "bundleName": {
-        "svelte": {
-            "ts": {
-                "path": "vue", // Folder where you can store your React components as single-file components.
-                "files": "*"
-            }
-        }
-    }
-}
-```
-
-> Note: In this configuration, "bundleName" should be replaced with the actual name of your bundle.
-
-## Contributing
-
-We welcome contributions to `@beyond-js/svelte-widgets`. If you'd like to contribute, please read the [Contribution Guidelines](https://beyondjs.com/docs/contributing).
-
-## License
-
-`@beyond-js/svelte-widgets` is [MIT licensed](LICENSE).
+Unmount is currently empty, and refresh/styles have documented limitations. Per-widget server render methods do not constitute a full SSR service or prove hydration compatibility. Use the local guide's verification cases before promising lifecycle or update behavior.
