@@ -1,0 +1,1 @@
+export { PageSvelteWidgetController } from './page';

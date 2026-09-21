@@ -1,7 +1,7 @@
 # @beyond-js/svelte-widgets
 
-Svelte 3 rendering controllers for Beyond Widgets. Read [architecture, public APIs and lifecycle](docs/architecture.md) for setup, mounting, styles/HMR, routing, server rendering and known gaps.
+Svelte 5 rendering controllers for Beyond Widgets. Read [architecture, public APIs and lifecycle](docs/architecture.md) for setup, mounting, styles/HMR, routing, server rendering and known gaps.
 
-Public imports are `@beyond-js/svelte-widgets/base` and `/page`; client/server platform selection chooses their implementation. Source files are authored as Beyond modules and require TypeScript plus the svelte processor. The [manifest](package.json) declares framework/core dependencies and distributions; installing dependencies alone does not create a runnable application or server.
+Public imports are `@beyond-js/svelte-widgets/base` and `/page`; each module manifest names a client entry for the browser and a server entry for Node. Source files are authored as Beyond modules for Packages, whose `ts` bundler compiles the TypeScript and the `.svelte` components with the Svelte 5 compiler. The [manifest](package.json) declares Svelte 5, the core dependency, the module directory and the bundler; the Beyond toolchain supplies the package to every workspace.
 
-Unmount is currently empty, and refresh/styles have documented limitations. Per-widget server render methods do not constitute a full SSR service or prove hydration compatibility. Use the local guide's verification cases before promising lifecycle or update behavior.
+Mount, unmount and refresh are implemented with the Svelte 5 `mount`, `hydrate` and `unmount` functions, and a Svelte widget is exercised in a real browser by the command line's web acceptance. Per-widget server render methods do not constitute a full SSR service; the Svelte hydration path is not yet verified. Use the local guide's verification cases before promising the remaining lifecycle behavior.

@@ -2,7 +2,7 @@
 
 Canonical instructions for this repository and its descendants. Tool-specific files must only reference AGENTS.md. This is an independent Git repository.
 
-Svelte Widgets adapter. Preserve its existing framework version and public contracts; lifecycle gaps are documented, not implicitly repaired.
+Svelte Widgets adapter, on Svelte 5 with runes and authored for Packages since 2026-09-21: manifest-first modules under `modules/base/{client,server}` and `modules/page/{client,server}`, compiled by the `ts` bundler on the development runtime and supplied by the toolchain; read [its architecture](docs/architecture.md) before changing it. Preserve its public contracts. The widget lifecycle, including hydration of server markup, is executed by the command line's `web` acceptance in a browser; pages are not usable on the development runtime, and remaining lifecycle gaps are documented, not implicitly repaired.
 
 - Use English for first-party docs, instructions, comments, docstrings and new explanatory text. Preserve intentional locale catalogs, public names/specifiers/paths, protocol keys and functional test values unless a compatibility change is explicitly authorized. Do not rewrite vendor, generated, lockfile or third-party content for language cleanup.
 - Preserve current uncommitted work and repository history. Do not commit, push, reset, publish or deploy without explicit task authorization.
