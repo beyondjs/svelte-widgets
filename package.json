@@ -9,6 +9,10 @@
 		"@beyond-js/widgets": "~1.1.0"
 	},
 	"beyond": {
+		"publication": {
+			"protocol": "beyond-publication/1",
+			"form": "source"
+		},
 		"modules": "./modules",
 		"bundler": "ts"
 	},
